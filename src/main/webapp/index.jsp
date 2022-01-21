@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>PT PROJECT DEPLOYED IN TOMCAT</h2>
+<h2>PT PROJECT DEPLOYED IN TOMCAT SERVER</h2>
 </body>
 </html>
