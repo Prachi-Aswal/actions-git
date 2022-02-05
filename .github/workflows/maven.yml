@@ -50,4 +50,4 @@ jobs:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       uses: SonarSource/sonarqube-quality-gate-action@v1.0.0   
       with:
-       scanMetadataReportFile: .scannerwork/report-task.txt
+       scanMetadataReportFile: /home/runner/work/actions-git/actions-git/target/sonar/report-task.txt
