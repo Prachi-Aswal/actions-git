@@ -1,12 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
- <profiles>
-	<profile>
-		<id>sonar</id>
-  <properties>
-  <sonar.organization>prachi-aswal</sonar.organization>
-  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
-</properties>	
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ptproject</groupId>
   <artifactId>mywebapp</artifactId>
@@ -14,6 +7,10 @@
   <version>1.0-SNAPSHOT</version>
   <name>mywebapp MavenWebapp</name>
   <url>http://maven.apache.org</url>
+  <properties>
+  <sonar.organization>prachi-aswal</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+ </properties>	
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -24,7 +21,5 @@
   </dependencies>
   <build>
     <finalName>mywebapp</finalName>
-  </build>
-</profile>
-  </profiles>			
+  </build>		
 </project>
