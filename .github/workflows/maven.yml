@@ -39,7 +39,13 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: SonarCloud Scan
-      run: mvn -B clean verify -Psonar -Dsonar.login=${{ secrets.SONAR_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run : mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=Prachi-Aswal_actions-git
       
+    - name: SonarQube Quality Gate Check
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      uses: SonarSource/sonarqube-quality-gate-action@v1.0.0     
