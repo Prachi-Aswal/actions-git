@@ -22,8 +22,8 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
+    - name: Maven install
+      run: mvn clean install
     - name: testing 
       run: mvn test
       
@@ -51,3 +51,7 @@ jobs:
       uses: SonarSource/sonarqube-quality-gate-action@v1.0.0   
       with:
        scanMetadataReportFile: /home/runner/work/actions-git/actions-git/target/sonar/report-task.txt
+       
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+       
