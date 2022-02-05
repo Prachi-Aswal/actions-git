@@ -6,7 +6,6 @@
   <properties>
   <sonar.organization>prachi-aswal</sonar.organization>
   <sonar.host.url>https://sonarcloud.io</sonar.host.url>
- <sonar.projectKey>prachi-aswal</sonar.projectKey>
 </properties>	
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ptproject</groupId>
