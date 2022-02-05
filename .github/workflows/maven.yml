@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  Install-and-Test:
 
     runs-on: ubuntu-latest
 
@@ -27,7 +27,7 @@ jobs:
     - name: testing 
       run: mvn test
       
-  Sonar:
+  Sonar-and-build:
 
     runs-on: ubuntu-latest
 
