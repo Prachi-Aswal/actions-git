@@ -20,6 +20,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
+        distribution: 'temurin'
        
         cache: maven
     - name: Maven install
@@ -37,7 +38,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-       
+        distribution: 'temurin'
     - name: SonarCloud Scan
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
