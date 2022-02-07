@@ -37,7 +37,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'temurin'
+       
     - name: SonarCloud Scan
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -53,5 +53,5 @@ jobs:
        scanMetadataReportFile: /home/runner/work/actions-git/actions-git/target/sonar/report-task.txt
        
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn package 
        
